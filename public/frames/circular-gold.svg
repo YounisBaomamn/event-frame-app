@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="1000" height="1000">
+  <defs>
+    <!-- Gradient for outer frame -->
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFE082" />
+      <stop offset="30%" stop-color="#FFB300" />
+      <stop offset="60%" stop-color="#FFF8E1" />
+      <stop offset="85%" stop-color="#FFA000" />
+      <stop offset="100%" stop-color="#FF6F00" />
+    </linearGradient>
+    <linearGradient id="darkBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#1e1b4b" />
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-opacity="0.5" />
+    </filter>
+  </defs>
+
+  <!-- Outer frame with transparent circular cutout using evenodd rule -->
+  <path fill="url(#darkBg)" fill-rule="evenodd" d="
+    M 0 0
+    H 1000
+    V 1000
+    H 0
+    Z
+    M 500 160
+    A 340 340 0 1 0 500 840
+    A 340 340 0 1 0 500 160
+    Z
+  "/>
+
+  <!-- Golden Ring around circle -->
+  <circle cx="500" cy="500" r="340" fill="none" stroke="url(#goldGrad)" stroke-width="18" filter="url(#shadow)" />
+  <circle cx="500" cy="500" r="355" fill="none" stroke="#FFE082" stroke-width="3" stroke-dasharray="10 15" opacity="0.8" />
+
+  <!-- Outer Golden Border -->
+  <rect x="30" y="30" width="940" height="940" rx="40" fill="none" stroke="url(#goldGrad)" stroke-width="12" />
+  <rect x="45" y="45" width="910" height="910" rx="30" fill="none" stroke="#F59E0B" stroke-width="2" opacity="0.6" />
+
+  <!-- Corner Ornaments -->
+  <g fill="url(#goldGrad)">
+    <!-- Top-left -->
+    <circle cx="80" cy="80" r="14" />
+    <path d="M 60 80 L 140 80 M 80 60 L 80 140" stroke="url(#goldGrad)" stroke-width="4" />
+    <!-- Top-right -->
+    <circle cx="920" cy="80" r="14" />
+    <path d="M 860 80 L 940 80 M 920 60 L 920 140" stroke="url(#goldGrad)" stroke-width="4" />
+    <!-- Bottom-left -->
+    <circle cx="80" cy="920" r="14" />
+    <path d="M 60 920 L 140 920 M 80 860 L 80 940" stroke="url(#goldGrad)" stroke-width="4" />
+    <!-- Bottom-right -->
+    <circle cx="920" cy="920" r="14" />
+    <path d="M 860 920 L 940 920 M 920 860 L 920 940" stroke="url(#goldGrad)" stroke-width="4" />
+  </g>
+
+  <!-- Top Festive Ribbon / Banner -->
+  <g filter="url(#shadow)">
+    <rect x="300" y="48" width="400" height="64" rx="32" fill="url(#goldGrad)" />
+    <text x="500" y="90" font-family="system-ui, -apple-system, sans-serif" font-size="28" font-weight="bold" fill="#1e1b4b" text-anchor="middle">
+      ✨ مناسبة مميزة ✨
+    </text>
+  </g>
+
+  <!-- Bottom Event Badge -->
+  <g filter="url(#shadow)">
+    <rect x="250" y="870" width="500" height="74" rx="37" fill="url(#goldGrad)" />
+    <text x="500" y="918" font-family="system-ui, -apple-system, sans-serif" font-size="26" font-weight="bold" fill="#0f172a" text-anchor="middle">
+      🎉 أجمل التهاني والتبريكات 🎉
+    </text>
+  </g>
+</svg>
